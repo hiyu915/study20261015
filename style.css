@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/* padding と border を幅に含めて計算させ、指定どおりの幅にする */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14.4px;
+  color: #383e45;
+}
+
+
+img {
+  /* 画像が親要素からはみ出さないようにする */
+  max-width: 100%;
+  /* 画像の下にできる数pxの隙間を消す */
+  vertical-align: bottom;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #24292e;
+  /* リンクの青色と下線を消す */
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+/* 中身の幅をそろえる（ヘッダー以外のセクション用） */
+.wrapper {
+  /* 画面が広くても、中身は最大 960px までに抑える */
+  max-width: 960px;
+  margin: 0 auto 100px;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/* セクション見出し（About / Bicycle 共通） */
+.section-title {
+  display: inline-block;
+  font-size: 32px;
+  margin: 0 0 60px;
+}
+
+#header {
+  max-width: 960px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  width: 120px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.site-title a {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  padding: 10px 0;
+}
+
+.nav-list li {
+  margin-left: 30px;
+}
+
+.mainvisual {
+  margin-bottom: 80px;
+}
+
+.mainvisual img {
+  width: 100%;
+  height: calc(100vh - 60px); 
+  object-fit: cover;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-name {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.bicycle-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bicycle-item {
+  width: 32%;
+}
+
+.bicycle-title {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#footer {
+  padding: 10px 0;
+  font-size: 8px;
+  text-align: center;
+}
